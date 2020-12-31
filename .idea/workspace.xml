@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c4df0ef-2026-4175-9d8d-2392e2d71204" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module_1/GIT_ HTML/Bai_tap/Tạo danh sách.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module_1/GIT_ HTML/Thuc_hanh/su_dung_the_html_coban.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module_1/GIT_ HTML/Bai_tap/CV_Ca_Nhan.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module_1/GIT_ HTML/Bai_tap/Gitproject" beforeDir="false" afterPath="$PROJECT_DIR$/Module_1/GIT_ HTML/Bai_tap/Gitproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module_1/GIT_ HTML/Bai_tap/Gitproject/Source/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module_1/GIT_ HTML/Bai_tap/Gitproject/Source/index.html" afterDir="false" />
@@ -53,7 +52,7 @@
       <updated>1609130175957</updated>
       <workItem from="1609130177137" duration="220000" />
       <workItem from="1609130447020" duration="59000" />
-      <workItem from="1609389437795" duration="2503000" />
+      <workItem from="1609389437795" duration="5346000" />
     </task>
     <servers />
   </component>
