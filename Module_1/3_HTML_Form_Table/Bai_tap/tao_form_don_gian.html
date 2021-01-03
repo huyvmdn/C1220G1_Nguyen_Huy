@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Form đơn giản</title>
+</head>
+<style>
+    html{
+        font-family: '.arial', sans-serif;
+    }
+
+    .fieldset1 {
+        width: 500px;
+        border-color: #d5feff;
+    }
+    .fieldset2 {
+        background-color: #fffda8;
+        width: 500px;
+    }
+    .like {
+        float: left;
+    }
+    .h1 {
+        color: white;
+        text-align: center;
+        background-color: #ff4c00;
+        padding-color: #d5feff;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+    .registration {
+        color: #0433ff;
+        background-color: aqua;
+        padding-color: #d5feff;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+    .a2 {
+        float: left;
+        margin-left: 0px;
+        border: none;
+    }
+    .email1 {
+        margin-left: 30px;
+    }
+    .music {
+        margin-left: 13px;
+    }
+    .book {
+        margin-left: 20px
+    }
+    .address {
+        float: left;
+    }
+    #select1 {
+        margin-left: 45px;
+    }
+</style>
+<body>
+<form action="tao_form_don_gian.html">
+    <fieldset name="fieldset1" class="fieldset1" >
+        <h1 class="h1" >SỞ THÍCH CỦA BẠN</h1>
+        <span style="color: blue" >Họ và tên</span>
+        <input type="text" name="yourname"><br><br>
+        <span style="color: blue">Email </span>
+        <input type="text" name="Email" class="email1" ><br><br>
+       <span class="like" style="color: blue">Sở thích </span>
+        <fieldset name="fieldset1" class="a2" >
+            <input type="checkbox"> <plan style="color: #ff4c00">Thể thao</plan>
+            <input type="checkbox" class="music" name="hobby" ><plan style="color: #ff4c00"> Âm nhạc </plan>
+            <input class="book" type="checkbox" name="hobby"  ><plan style="color: #ff4c00"> Đọc sách</plan> <br>
+            <input type="checkbox" name="hobby" ><plan style="color: #ff4c00"> Lướt Web</plan>
+            <input type="checkbox" name="hobby"><plan style="color: #ff4c00"> Chơi game</plan>
+            <input type="checkbox" name="hobby"><plan style="color: #ff4c00"> Điện ảnh</plan> <br>
+            <input type="checkbox" name="hobby"><plan style="color: #ff4c00"> Du lịch</plan>
+        </fieldset>
+        <br> <br> <br> <br> <br>
+        <input type="submit" name="submit1" value="Gửi thông tin"  >
+        <input type="reset" name="reset1" value="Nhập lại">
+
+    </fieldset>
+    <br>
+</form>
+<form action="tao_form_don_gian.html">
+    <fieldset class="fieldset2">
+        <h1 class="registration">ĐĂNG KÝ HỌC VIÊN</h1>
+        <span style="color: blue" >Họ và tên</span>
+        <input type="text" name="yourname"><br><br>
+        <span style="color: blue">Email </span>
+        <input type="text" name="Email" class="email1" ><br><br>
+        <input type="radio" name="gender">Nam
+        <input type="radio" name="gender">Nữ <br><br>
+        <span style="color: blue" class="address">Địa chỉ </span>
+        <textarea name="address2" style="margin-left: 30px"> </textarea> <br><br>
+        <span style="color: blue" >Lớp </span>
+        <select  name="select" id="select1" >
+            <option value="lớp A">lớp A</option>
+            <option value="lớp B">lớp B</option>
+            <option value="lớp C">lớp C</option>
+            <option value="lớp D">lớp C</option>
+        </select> <br><br>
+        <span style="color: blue" >Email</span>
+        <input type="text" name="yourname" class="email1"><br><br>
+        <span style="color: blue">Điện thoại </span>
+        <input type="text" name="Email"  ><br><br>
+        <input type="submit" name="submit2" value="Đăng ký"  >
+        <input type="reset" name="reset2" value="Nhập lại">
+    </fieldset>
+</form>
+</body>
+</html>

@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c81417-1f3b-4562-af0f-59bd8621861f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/simpleform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GIT_ HTML/Bai_tap/CV_Ca_Nhan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GIT_ HTML/Bai_tap/Gitproject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GIT_ HTML/Bai_tap/Tạo danh sách.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GIT_ HTML/Thuc_hanh/su_dung_the_html_coban.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GIT_ HTML/Thuc_hanh/tao_du_an_moi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GIT_ HTML/Thuc_hanh/wf-hello" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mô tả thuật toán bằng Pseudo code &amp; Flowchart/bai tap/Mô tả thuật toán tính điểm trung bình.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mô tả thuật toán bằng Pseudo code &amp; Flowchart/bai tap/chuyển đổi tiền tệ.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mô tả thuật toán bằng Pseudo code &amp; Flowchart/bai tap/số lớn nhất nhiều biến.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mô tả thuật toán bằng Pseudo code &amp; Flowchart/bai tap/số lớn nhất.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mô tả thuật toán bằng Pseudo code &amp; Flowchart/bai tap/xếp hạng sinh viên dựa theo điểm số.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mô tả thuật toán bằng Pseudo code &amp; Flowchart/thuc hanh/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mô tả thuật toán bằng Pseudo code &amp; Flowchart/thuc hanh/nhiệt độ ( Flowchart + Pseudo code).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mô tả thuật toán bằng Pseudo code &amp; Flowchart/thuc hanh/số.jpg" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/timgoogle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2_GIT_ HTML/Bai_tap/Gitproject" beforeDir="false" afterPath="$PROJECT_DIR$/../../2_GIT_ HTML/Bai_tap/Gitproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +32,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bai_tap" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -57,11 +44,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609661445353</updated>
-      <workItem from="1609661446622" duration="763000" />
+      <workItem from="1609661446622" duration="2141000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1609663588584">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609663588584" />
   </component>
 </project>
