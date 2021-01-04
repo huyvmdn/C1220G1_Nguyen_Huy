@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c81417-1f3b-4562-af0f-59bd8621861f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/timgoogle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/form_dang_ky.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thoi_khoa_bieu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tablesimple.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../2_GIT_ HTML/Bai_tap/Gitproject" beforeDir="false" afterPath="$PROJECT_DIR$/../../2_GIT_ HTML/Bai_tap/Gitproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bai_tap/tao_form_don_gian.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Bai_tap/tao_form_don_gian.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609661445353</updated>
       <workItem from="1609661446622" duration="2141000" />
+      <workItem from="1609733999583" duration="1395000" />
     </task>
     <servers />
   </component>
@@ -52,9 +56,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1609663588584">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1609735394092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609663588584" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609735394092" />
   </component>
 </project>
