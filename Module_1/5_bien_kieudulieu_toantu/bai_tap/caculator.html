@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<h2>CACULATOR</h2>
+<input type="text" id="cacu1">
+<input type="text" id="cacu2"><br><br>
+<button onclick="plus()">Addition(+)</button>
+<button onclick="minus()">Subtraction(-)</button>
+<button onclick="multiply()">Multiplication(X)</button>
+<button onclick="divide()">Division(/)</button>
+<h2 id="result" style="color: blue"></h2>
+<script>
+    function plus() {
+        let a = document.getElementById("cacu1").value;
+        let b = document.getElementById("cacu2").value;
+        document.getElementById("result").innerText="Result Addition :" + (a*1 + b*1);
+    }
+    function minus() {
+        let a = document.getElementById("cacu1").value;
+        let b = document.getElementById("cacu2").value;
+        document.getElementById("result").innerText="Result Subtraction :" + (a*1 - b*1);
+    }
+    function multiply() {
+        let a = document.getElementById("cacu1").value;
+        let b = document.getElementById("cacu2").value;
+        document.getElementById("result").innerText="Result Multiplication :" + (a * b);
+    }
+    function divide() {
+        let a = document.getElementById("cacu1").value;
+        let b = document.getElementById("cacu2").value;
+        document.getElementById("result").innerText="Result Division :" + (a / b);
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency conversion</title>
+</head>
+<style>
+    #card {
+        margin-left: 30px;
+    }
+    #card2 {
+        margin-left: 180px;
+    }
+</style>
+<body>
+<from>
+    <pre style="" ><strong> Amount                      From Currency                     To Currency </strong></pre>
+    <input type="number" id="number">
+    <select name="dong1" id="card">
+        <option value="vnd">Việt Nam</option>
+        <option value="lao">Lào</option>
+    </select>
+
+    <select name="dong2" id="card2">
+        <option value="usd" id="my">USD</option>
+        <option value="lao2" id="lao2">Lào</option>
+    </select>
+    <button onclick="convert()">Convert</button>
+    <p id="result" style="color: blue">result :</p>
+
+</from>
+</body>
+<script>
+    function convert() {
+    let a = parseInt(document.getElementById("number").value);
+    let b = document.getElementById("card").value;
+    let c = document.getElementById("card2").value;
+    if ( b == "vnd" && c == "usd")
+
+        document.getElementById("result").innerText="Result :" + 23000/a + " USD";
+    else
+        document.getElementById("result").innerText="Result : Chưa có dữ liệu"
+    }
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+Vật lý:
+<input type="number" id="physical"> <br><br>
+Hóa học:
+<input type="number" id="chemistry"> <br><br>
+Sinh học:
+<input type="number" id="biological"> <br><br>
+<button onclick="tong1()">Tổng điểm </button>
+<button onclick="trungbinh()">Điểm trung bình </button>
+<br><br>
+Đổi Độ C sang độ F:
+<input type="text" id="Celsius"> <br><br>
+<button onclick="doF()">Chuyển đổi</button>
+<br><br>
+Diện tích hình tròn: <br>
+Điền R:
+<input type="text" id="dTtron"> <br><br>
+<button onclick="dtT()">Chuyển đổi</button>
+<br><br>
+Chu vi hình tròn: <br>
+Điền R:
+<input type="text" id="cvtron"> <br><br>
+<button onclick="cvT()">Chuyển đổi</button>
+<script>
+    function tong1() {
+        let a = parseInt(document.getElementById("physical").value);
+        let b = parseInt(document.getElementById("chemistry").value);
+        let c = parseInt(document.getElementById("biological").value);
+        alert( a + b + c )
+    }
+    function trungbinh() {
+        let a = parseInt(document.getElementById("physical").value);
+        let b = parseInt(document.getElementById("chemistry").value);
+        let c = parseInt(document.getElementById("biological").value);
+        alert( (a + b + c)/3 )
+    }
+    function doF() {
+    let a = parseInt(document.getElementById("Celsius").value);
+        alert( F = (9*a)/5 + 32 )
+    }
+    function dtT() {
+        let a = parseInt(document.getElementById("cvtron").value);
+        alert(S = a * a* 3.14 )
+    }
+    function cvT() {
+        let a = parseInt(document.getElementById("cvtron").value);
+        alert(S = 2 * a* 3.14 )
+    }
+
+</script>
+</body>
+</html>
