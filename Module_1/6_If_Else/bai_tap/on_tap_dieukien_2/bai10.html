@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let kwh = parseFloat(prompt("Nhập số kwh của bạn:"));
+    let kwh50 = 50*1678;
+    let kwh100 = kwh50 + 50*1734;
+    let kwh200 = kwh100 + 100*2014;
+    let kwh300 = kwh200 + 100*2536;
+    let kwh400 = kwh300 + 100*2834;
+    if ( kwh<50) {
+        alert(" Số tiền điện nhà bạn: " + kwh*1678);
+    }
+    else if (kwh<100) {
+        alert(" Số tiền điện nhà bạn: " + (kwh50+(kwh-50)*1734));
+    }
+    else if (kwh<200) {
+        alert(" Số tiền điện nhà bạn: " + (kwh100+(kwh-100)*2014));
+    }
+    else if (kwh<300) {
+        alert(" Số tiền điện nhà bạn: " + (kwh200+(kwh-200)*2536));
+    }
+    else if (kwh<400) {
+        alert(" Số tiền điện nhà bạn: " + (kwh200+(kwh-300)*2834));
+    }
+    else if (kwh>400) {
+        alert(" Số tiền điện nhà bạn: " + (kwh400+(kwh-400)*2536));
+    } else {
+        alert(" Không tính được");
+    }
+
+</script>
+</body>
+</html>

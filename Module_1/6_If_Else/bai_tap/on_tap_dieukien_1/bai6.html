@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h3>
+Số lượng mặt hàng1:<input id="number1" type="number">
+Số lượng mặt hàng2:<input id="number2" type="number">
+Số lượng mặt hàng3:<input id="number3" type="number">
+
+<button onclick="profit()"> Kết quả</button>
+
+<script>
+
+    function profit() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+        let number3 = parseFloat(document.getElementById("number3").value);
+        let revenue = number1*50000 + number2*150000 + number3*300000 ;
+        if (revenue >= 100000000) {
+            let profit2 = revenue*20/100
+            alert(" doanh thu :" + revenue +"vnđ" + " Hoa hồng nhận được 20%: " + profit2);
+        } else if (revenue >= 50000000) {
+            let profit2 = revenue*10/100
+            alert(" doanh thu :" + revenue +"vnđ" + " Hoa hồng nhận được 10%: " + profit2);
+        } else if (revenue >= 0) {
+            alert("doanh thu " + revenue +"vnđ" + " không nhận được hoa hồng");
+        } else {
+            alert("Không nhận được kết quả");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính thuế thu nhập cá nhân.</title>
+</head>
+<body>
+<script>
+    let income = parseFloat(prompt("Nhập số thu nhập của bạn( đơn vị triệu đồng:"));
+    if ( income<=5) {
+        alert(" Số tiền thuế bạn phải nộp: " + income*5/100);
+    }
+    else if (income<=10) {
+        alert(" Số tiền thuế bạn phải nộp: " + (0.25 +(income-5)*10/100) + "triệu đồng");
+    }
+    else if (income<=18) {
+        alert(" Số tiền thuế bạn phải nộp: " + (0.75+(income-10)*15/100)+ "triệu đồng");
+    }
+    else if (income<=32) {
+        alert(" Số tiền thuế bạn phải nộp: " + (1.95+(income-18)*20/100)+ "triệu đồng");
+    }
+    else if (income<=52) {
+        alert(" Số tiền thuế bạn phải nộp: " + (4.75+(income-32)*25/100)+ "triệu đồng");
+    }
+    else if (income<=80) {
+        alert(" Số tiền thuế bạn phải nộp: " + (9.75 + (income - 52) * 30 /100)+ "triệu đồng");
+    }
+    else if (income>80) {
+            alert(" Số tiền thuế bạn phải nộp: " + (9.75+(income-80)*15/100)+ "triệu đồng");
+    } else {
+        alert(" Không tính được");
+    }
+</script>
+</body>
+</html>

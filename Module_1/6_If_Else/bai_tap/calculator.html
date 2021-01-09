@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<style>
+    #calcu {
+        height: 500px;
+        width: 500px;
+        border: 5px;
+    }
+    .operator {
+        width: 100px;
+        height: 70px;
+        background-color: lightcyan;
+    }
+    #bb {
+    }
+</style>
+<body>
+<div id="calcu" >
+    <fieldset style="text-align: center">
+
+    <input id="result" value="0" type="text" style="width: 400px; height: 50px; font-size: medium"> <br><br>
+    <div id="bb"><p id="result" > 0</p></div>
+    <button class="operator" onclick="a1()">1</button>
+    <button class="operator"  onclick="a2()">2</button>
+    <button class="operator"  onclick="a3()">3</button>
+    <button class="operator"  onclick="b1()">+</button>
+    <button class="operator" onclick="a4()">4</button>
+    <button class="operator" onclick="a5()">5</button>
+    <button class="operator" onclick="a6()" >6</button>
+    <button class="operator" onclick="b2()">-</button>
+    <button class="operator" onclick="a7()" >7</button>
+    <button class="operator" onclick="a8()">8</button>
+    <button class="operator" onclick="a9()">9</button>
+    <button class="operator" onclick="b3()">X</button>
+    <button class="operator" onclick="b4()">C</button>
+    <button class="operator" onclick="a0()">0</button>
+    <button class="operator" onclick="b5()">=</button>
+    <button class="operator" onclick="b6()">/</button>
+    </fieldset>
+</div>
+<script>
+
+    let a = document.getElementById("result").value;
+        a = "";
+
+    function a1() {
+        document.getElementById("result").innerText= a += "1"
+    }
+    function a2() {
+        document.getElementById("result").innerText= a += "2"
+    }
+    function a3() {
+        document.getElementById("result").innerText= a += "3"
+    }
+    function a4() {
+        document.getElementById("result").innerText= a += "4"
+    }
+    function a5() {
+        document.getElementById("result").innerText= a += "5"
+    }
+    function a6() {
+        document.getElementById("result").innerText= a += "6"
+    }
+    function a7() {
+        document.getElementById("result").innerText= a += "7"
+    }
+    function a8() {
+        document.getElementById("result").innerText= a += "8"
+    }
+    function a9() {
+        document.getElementById("result").innerText= a += "9"
+    }
+    function a0() {
+        document.getElementById("result").innerText= a += "0"
+    }
+    function b1() {
+        document.getElementById("result").innerText= a += "+"
+    }
+    function b2() {
+        document.getElementById("result").innerText= a += "-"
+    }
+    function b3() {
+        document.getElementById("result").innerText= a += "*"
+    }
+    function b4() {
+        a = "0"
+        document.getElementById("result").innerText= ""
+    }
+    function b6() {
+        document.getElementById("result").innerText= a += "/"
+    }
+    function b5() {
+       eval(a);
+       document.getElementById("result").innerText= eval(a);
+    }
+</script>
+</body>
+</html>

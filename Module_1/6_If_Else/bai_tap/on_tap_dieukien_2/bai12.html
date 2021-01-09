@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let money = parseFloat(prompt("Nhập số tiền bạn vay"));
+    let month = parseFloat(prompt("Nhập số tháng gửi"));
+    let interest = parseFloat(prompt("Nhập số lãi suất %"));
+    let result = money*(1+interest/100)**month;
+    let c = result-money;
+         c = c.toFixed(2);
+    alert( "Tiền lãi phải trả : " + c + "vnđ");
+</script>
+</body>
+</html>

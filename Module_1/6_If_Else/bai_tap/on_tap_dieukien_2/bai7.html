@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ham bac 2</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhập số a"));
+    let b = parseFloat(prompt("Nhập số b"));
+    let c = parseFloat(prompt("Nhập số c"));
+    let S = b**2 - 4*a*c ;
+    if ( S < 0) {
+        alert("Phương trình vô nghiệm")
+    }
+    else if ( S === 0 ) {
+        let x = -b/2*a ;
+        alert(" Phương trình có nghiệm kép : " + x );
+    }
+    else {
+        let x1 = (-b + Math.sqrt(S))/2*a;
+        let x2 = (-b - Math.sqrt(S))/2*a;
+        alert(" Phương trình có 2 nghiệm kép : " + x1 + " và "+ x2 );
+    }
+</script>
+</body>
+</html>

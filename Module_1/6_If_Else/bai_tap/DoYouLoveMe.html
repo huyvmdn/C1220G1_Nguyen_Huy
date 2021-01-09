@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLoveMe</title>
+</head>
+<style>
+    #dichuyen {
+        position: absolute;
+    }
+    #dichuyen{
+        margin-left: 40px;
+    }
+</style>
+<body>
+<h2>DoYouLoveMe?</h2>
+<button onclick="yes()">YES</button>
+<button id="dichuyen" onmouseover="no()">NO</button>
+<p id="write"></p>
+<script>
+
+    function yes() {
+
+        document.getElementById("write").innerText = "<3";
+    }
+    function no() {
+        let w = window.innerHeight;
+        let h = window.innerWidth;
+        let randomw = Math.floor(Math.random() * w);
+        let randomh = Math.floor(Math.random() * h);
+        document.getElementById("dichuyen").style.left = randomw +"px";
+        document.getElementById("dichuyen").style.top = randomh +"px";
+    }
+</script>
+</body>
+</html>

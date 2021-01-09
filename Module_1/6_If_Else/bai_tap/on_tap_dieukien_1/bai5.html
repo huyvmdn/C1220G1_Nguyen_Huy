@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let number1= parseInt(prompt("nhập vào điểm Bài kiểm tra "));
+    let number2= parseInt(prompt("nhập vào điểm giữa kỳ"));
+    let number3= parseInt(prompt("nhập vào điểm Cuối kỳ"));
+    let medium = (number1 + number2*2 + number3*4)/7;
+
+   if (medium >= 8) {
+       alert( "Giỏi");
+   }
+   else if ( medium >=6.5 ) {
+       alert( "Khá");
+   }
+   else if ( medium >=5) {
+       alert( "Trung bình");
+   }
+   else if ( medium>=0 && medium<5) {
+       alert( "yếu");
+   }
+   else {
+       alert( "không phải điểm số");
+   }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</title>
+</head>
+<body>
+<h3>Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</h3>
+Số phút gọi nội tỉnh:<input id="provincial" type="number"><br><br>
+Sô phút gọi liên tỉnh:<input id="inteMmunicipal" type="number"><br><br>
+Số phút gọi di động :<input id="mobile" type="number"><br><br>
+
+số phút gọi ngoài nước: <input id="foreign" type="number"><br><br>
+<button onclick="resuft()"> Kết quả</button>
+<script>
+    function resuft() {
+        let provincial = parseFloat(document.getElementById("provincial").value);
+        let inteMmunicipal = parseFloat(document.getElementById("inteMmunicipal").value);
+        let foreign = parseFloat(document.getElementById("foreign").value);
+        let mobile = parseFloat(document.getElementById("mobile").value);
+        let result= provincial*200 + inteMmunicipal*800 + mobile*900 + foreign*3200;
+        alert("Cước điện thoại của ban là" + result +"vnđ")
+    }
+</script>
+</body>
+</html>

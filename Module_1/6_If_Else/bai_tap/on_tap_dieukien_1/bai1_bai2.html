@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+<h3>a có chia hết cho b ? </h3>
+    a:<input id="numbera" type="text">
+    b:<input id="numberb" type="text">
+    <button onclick="divisible()"> Kết quả</button>
+    <p id="result"></p>
+<h3>Học sinh có đủ tuổi học lớp 10</h3>
+ Tuổi: <input type="number" id="age">
+<button onclick="age()"> bấm vào đây </button><br>
+<p id="enough"></p>
+<script>
+    function divisible() {
+       let a = parseInt(document.getElementById("numbera").value);
+       let b = parseInt(document.getElementById("numberb").value);
+        if ( a%b == 0) {
+    document.getElementById("result").innerText = " a chia hết cho b";
+        }
+        else {
+            document.getElementById("result").innerText = " a không chia hết cho b";
+        }
+ }
+    function age() {
+        let age = parseInt(document.getElementById("age").value);
+        if (age >= 16) {
+            document.getElementById("enough").innerText = " Đủ tuổi học lớp 10";
+        }
+        else {
+            document.getElementById("enough").innerText = " Không đủ tuổi học lớp 10";
+        }
+    }
+
+</script>
+</body>
+</html>
