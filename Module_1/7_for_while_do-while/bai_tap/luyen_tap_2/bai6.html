@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (j=0;j<6;j++) {
+        for (i=0;i<=6;i++) {
+            if (j==0 && (i==0 || i ==3 || i==6 )){
+                document.write("&nbsp&nbsp&nbsp&nbsp")
+                continue;
+            } else if (j==3 && (i==0 || i ==6)){
+                document.write("&nbsp&nbsp&nbsp&nbsp")
+                continue;
+            }else if (j==4 && (i==0 || i ==1 || i==5 || i==6)){
+                document.write("&nbsp&nbsp&nbsp&nbsp")
+                continue;
+            } else if (j==5 && (i== 0 || i ==1 || i==2 || i==4 || i==5 || i==6)){
+                document.write("&nbsp&nbsp&nbsp&nbsp")
+                continue;
+            }
+            let b= "&nbsp*&nbsp"
+            document.write(b);
+        }
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= parseFloat(prompt("nhập số tiền ban đầu :"));
+    let b= parseFloat(prompt("lãi suất (%) :"));
+    let t= parseFloat(prompt("nhập số tháng :"));
+    let r = b/100;
+    let percent=1+r;
+    for(i=1;i<=t;i++) {
+        percent = percent**percent
+    }
+    let tienlai = a*percent - a;
+    alert(tienlai);
+
+</script>
+</body>
+</html>

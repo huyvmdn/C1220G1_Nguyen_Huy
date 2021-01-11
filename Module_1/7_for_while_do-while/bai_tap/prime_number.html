@@ -6,13 +6,23 @@
 </head>
 <body>
 <script>
-    let n =2;
-    for (;n<20;n++) {
-       let b = n%2;
-       let c =Number.isInteger(Math.sqrt(n));
-       if (b!=0 && c!=true)
-           document.write(n+"<br>");
+    let num=20;
+    let count= 0;
+    let n= 2;
+    while (count<num) {
+        let check = true;
+        for (let i=2; i<n;i++){
+            if (n%i==0){
+                check = false;
+                break;
+            }
+        }if (check ) {
+            document.write(n +"<br>");
+        count++;
+        }
+        n++;
     }
+
 
 </script>
 </body>
