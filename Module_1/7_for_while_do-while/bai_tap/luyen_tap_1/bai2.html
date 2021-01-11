@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> nhiệt độ hiện tại</title>
+</head>
+<body>
+<script>
+        value= parseFloat(prompt(" nhập nhiệt độ"));
+      for (; value<20 || value >100;) {
+          if (value >100) {
+              alert("Xin giảm nhiệt độ");
+              value= parseFloat(prompt(" nhập nhiệt độ"));
+          }
+          else if (value<20) {
+              alert("Xin tăng nhiệt độ");
+              value= parseFloat(prompt(" nhập nhiệt độ"));
+          } else {
+              alert("nhiệt độ của bạn là" + value)
+          }
+        }
+</script>
+</body>
+</html>

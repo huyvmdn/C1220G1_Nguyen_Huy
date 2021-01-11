@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+<body>
+<script>
+    let name = "a Lĩnh";
+    let cmnd = "2016292929";
+    let birthday = "04/04/2020";
+    let email= "linh@gmail.com";
+    let address= "codegym nè";
+    let typeService= "villa";
+    let typeRoom= "vip";
+    let typeCustomer= "diamond";
+    let discount=10;
+    let quantityIncluded=5;
+    let rentDays=7;
+    let totalPay;
+
+    let choose = prompt("1. Hiển thị thông tin khách hàng.\n" +
+    "2. Chỉnh sửa thông tin khách hàng\n" +
+    "3. Hiển thị giá sau khi được giảm\n");
+    switch (choose) {
+        case "1":
+            alert("name : "+name + "\n"+
+                "cmnd : "+cmnd +"\n"+
+                "birthday : " + birthday +"\n"+
+                "email : "+email +"\n"+
+                "address : "+address +"\n"+
+                "typeService : "+typeService +"\n"+
+                "typeRoom : "+typeRoom +"\n"+
+                "typeCustomer : "+typeCustomer +"\n"+
+                "discount : "+discount +"\n"+
+                "quantityIncluded : "+quantityIncluded +"\n"+
+                "rendDays : "+ rentDays +"\n"
+            )
+            break;
+        case "2":
+            chooseedit= parseInt(prompt("1. name : "+name + "\n"+
+                "2. cmnd : "+cmnd +"\n"+
+                "3. birthday : " + birthday +"\n"+
+                "4. email : "+email +"\n"+
+                "5. address : "+address +"\n"+
+                "6. typeService : "+typeService +"\n"+
+                "7. typeRoom : "+typeRoom +"\n"+
+                "8. typeCustomer : "+typeCustomer +"\n"+
+                "9. discount : "+discount +"\n"+
+                "10. quantityIncluded : "+quantityIncluded +"\n"+
+                "11. rendDays : "+ rentDays
+            ))
+            switch (chooseedit) {
+                case 1:
+                    name= prompt("Input name: ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 2:
+                    cmnd= prompt("Input cmnd: ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 3:
+                    birthday= prompt("Input birthday: ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 4:
+                    email= prompt("Input email: ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 5:
+                    address= prompt("Input address: ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 6:
+                    typeService= prompt("Input type Service(villa,house,room): ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 7:
+                    typeRoom= prompt("Input type Room(vip,business,normal): ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 8:
+                    typeCustomer= prompt("Input type Customer(member,silver,gold,platinum,diamond): ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 9:
+                    discount= prompt("Input discount (%) : ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 10:
+                    quantityIncluded= prompt("Input quantity Included: ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                case 11:
+                    rentDays= prompt("Input rend Days: ");
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11.rendDays : "+ rentDays +"\n"
+                    )
+                    break;
+                    default:
+                        alert('failed');
+            }
+            break;
+            default:
+                alert('Bạn hãy chọn các chức năng có trong trình đơn');
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

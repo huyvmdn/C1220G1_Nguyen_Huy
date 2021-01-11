@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+</head>
+<body>
+<script>
+    let name;
+    let cmnd;
+    let birthday;
+    let email;
+    let address;
+    let typeService;
+    let typeRoom;
+    let typeCustomer;
+    let discount;
+    let quantityIncluded;
+    let rentDays;
+    let totalPay;
+    name= prompt("Input name: ");
+    cmnd= prompt("Input cmnd: ");
+    birthday= prompt("Input birthday: ");
+    email= prompt("Input email: ");
+    address= prompt("Input address: ");
+    typeService= prompt("Input type Service(villa,house,room): ");
+    typeRoom= prompt("Input type Room(vip,business,normal): ");
+    typeCustomer= prompt("Input type Customer(member,silver,gold,platinum,diamond): ");
+    // discount= prompt("Input discount (%) : ");
+    quantityIncluded= prompt("Input quantity Included: ");
+    rentDays= prompt("Input rend Days: ");
+    if (typeService == "villa") {
+        if (typeCustomer === "member") {
+            totalPay = 500 * rentDays * 0.95
+        } else if (typeCustomer === "silver") {
+            totalPay = 500 * rentDays * 0.9
+        } else if (typeCustomer === "gold") {
+            totalPay = 500 * rentDays * 0.85
+        } else if (typeCustomer === "platinum") {
+            totalPay = 500 * rentDays * 0.8
+        } else if (typeCustomer === "diamond") {
+            totalPay = 500 * rentDays * 0.75
+        }else {
+            totalPay = "không thể tính được vì điền sai thông tin";
+        }
+    }
+    else if (typeService == "house") {
+        if (typeCustomer === "member") {
+            totalPay = 300 * rentDays * 0.95;
+        } else if (typeCustomer === "silver") {
+            totalPay = 300 * rentDays * 0.9;
+        } else if (typeCustomer === "gold") {
+            totalPay = 300 * rentDays * 0.85;
+        } else if (typeCustomer === "platinum") {
+            totalPay = 300 * rentDays * 0.8;
+        } else if (typeCustomer === "diamond") {
+            totalPay = 300 * rentDays * 0.75;
+        }else {
+            totalPay = "không thể tính được vì điền sai thông tin";
+        }
+    }
+    else if (typeService == "room")
+    {
+        if (typeCustomer === "member") {
+            totalPay = 100 * rentDays * 0.95;
+        } else if (typeCustomer === "silver") {
+            totalPay = 100 * rentDays * 0.9;
+        } else if (typeCustomer === "gold") {
+            totalPay = 100 * rentDays * 0.85;
+        } else if (typeCustomer === "platinum") {
+            totalPay = 100 * rentDays * 0.8;
+        } else  if (typeCustomer === "diamond") {
+            totalPay = 100 * rentDays * 0.75;
+        }else {
+            totalPay = "không thể tính được vì điền sai thông tin";
+        }
+    }else {
+        totalPay = "không thể tính được vì điền sai thông tin";}
+    alert("name : "+ name+
+        "\ncmnd : "+cmnd +
+    "\nbirthday : " + birthday +
+    "\nemail : "+email +
+    "\naddress : "+address +
+    "\ntype Service : "+typeService +
+    "\ntype Room : "+typeRoom +
+    "\ntype Customer : "+typeCustomer +
+    // "\ndiscount : "+discount +
+    "\nquantity Included : "+quantityIncluded +
+    "\nrent Days : "+ rentDays +
+    "\ntotalPay : "+totalPay
+    )
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="text-align: center"><button style="width: 200px;height: 100px" onclick="play()">CHƠI</button></p>
+<script>
+    function play() {
+      input= parseInt(prompt("Nhập số đầu :"));
+       output= parseInt(prompt("Nhập cuối:"));
+        function TaoSoNgauNhien(min, max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let a = TaoSoNgauNhien(input , output);
+        let i;
+        while (i != a) {
+            i =parseInt(prompt(" Nhập số bạn chọn"));
+        }
+        alert(" Chúc mừng và kết thúc lượt chơi")
+    }
+</script>
+</body>
+</html>
