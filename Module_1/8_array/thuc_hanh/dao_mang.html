@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = [2,5,4,6,9,16];
+
+    document.write(x.reverse() + "<br>");
+
+    let y = [2,5,4,6,9,16];
+    let first = 0;
+    let last = y.length - 1;
+    while (first<last) {
+        let z = y[first];
+        y[first] = y[last];
+        y[last] = z;
+        first++;
+        last--;
+    }
+    document.write(y);
+</script>
+</body>
+</html>

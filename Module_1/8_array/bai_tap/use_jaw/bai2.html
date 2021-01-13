@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt("nhập số:");
+    let str= num.toString();
+
+
+    for (i=1;i< str.length;i++) {
+        if (str.charAt(i-1)%2 ==0 && str.charAt(i)%2==0 ) {
+            document.write("-"+ str.charAt(i) ) ;
+            continue;
+        }
+        document.write(str.charAt(i));
+    }
+</script>
+</body>
+</html>

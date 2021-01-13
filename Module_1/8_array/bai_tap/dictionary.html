@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text2">
+<button onclick="search1()">search</button>
+<br>
+<p id="pre"></p>
+
+
+<script>
+    let dicE = [
+        "function",
+        "variable",
+        "character",
+        "operator"
+    ];
+    let dicV = [
+        "hành động",
+        "biến",
+        "ký tự," ,
+        "toán tử"
+    ];
+    let check =false;
+    function search1() {
+         let text1 = document.getElementById("text2").value;
+      for (i=0;i<4;i++){
+          if (text1 === dicE[i]) {
+              document.getElementById("pre").innerText= "Từ " + text1 + " có nghĩa là : " + dicV[i];
+              break;
+          }else if (i==3 && text1!==dicE[i] ) {
+              document.getElementById("pre").innerText= "không tìm thấy"
+          }
+
+
+      }
+
+    }
+</script>
+</body>
+</html>
