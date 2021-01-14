@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check=false;
+    let a;
+    let negative =0;
+    lengthNum = parseInt(prompt("nhập vào số phần tủ của mảng"));
+    let intArray = new Array(lengthNum);
+    for (let i=0;i<intArray.length;i++) {
+        do {
+            a = prompt("nhập vào số nguyên của mảng");
+            check = (!isNaN(a) && a == parseInt(a));
+            a = parseInt(a);
+        } while (!check);
+        intArray[i] = a;
+        if ( intArray[i]<0) {
+            negative++;
+        }
+    }
+    alert('Tổng số nguyên âm trong mảng là : ' + negative);
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let intArray =[];
+    let a;
+    max =0;
+    let index;
+    let j;
+    for (let i=0;i<10;i++) {
+        do {
+            a = prompt("nhập vào số nguyên của mảng");
+            check = (!isNaN(a) && a == parseInt(a));
+            a = parseInt(a);
+        } while (!check);
+        intArray[i] = a;
+    }
+    for (let i=0;i<intArray.length;i++)  {
+        for (j=i+1;j<=intArray.length;j++) {
+        if (intArray[i]< intArray[j]) {
+            index=intArray[i];
+            intArray[i]=intArray[j];
+            intArray[j]=index;
+        }
+    }
+    }
+    console.log(intArray);
+
+</script>
+</body>
+</html>

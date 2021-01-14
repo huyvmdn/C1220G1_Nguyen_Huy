@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let b = parseInt(prompt('Số phần tử trong mảng'));
+    let intArray = new Array(b);
+    let max = 0;
+    let a;
+    let result=0;
+    for (let i = 0; i < intArray.length; i++) {
+        a = parseInt(prompt("nhập số : "));
+        intArray[i] = a;
+        if (intArray[i] > max) {
+            max = intArray[i];
+        }
+        result+=a;
+    }
+    alert('Số lớn nhất là : '+max +'Trung bình của mảng là : '+ result/intArray.length);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= prompt(" nhập chuổi bạn muốn đém số từ:")
+    a=a.trim();
+    let arr = a.split("");
+    let num=0;
+    for (let i=0;i<arr.length;i++) {
+        if (arr[i] === " " && arr[i+1]=== " " ) {
+            arr.splice(i+1,1);
+            i--;
+        }
+    }
+    for (let i = 0; i <arr.length ; i++) {
+        if (arr[i] == " " ) {
+            num++;
+        }
+    }
+    num++;
+    alert(num);
+
+</script>
+</body>
+</html>

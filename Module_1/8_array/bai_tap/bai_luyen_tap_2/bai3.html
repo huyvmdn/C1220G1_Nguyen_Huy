@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a;
+    let numChar= 0;
+    lengthNum = parseInt(prompt("nhập vào số phần tủ của mảng"));
+    let intArray = new Array(lengthNum);
+    for (let i=0;i<intArray.length;i++) {
+        a = prompt("nhập vào số nguyên của mảng");
+        for (let j=0;j<a.length;j++) {
+           if (!isNaN(a.charAt(j))) {
+               numChar++;
+           }
+        }
+        intArray[i] = a;
+    }
+    alert('Kích thước mảng :'+intArray.length+ "."+ intArray + 'Số số trong mảng : ' +numChar);
+</script>
+</body>
+</html>

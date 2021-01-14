@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let intArray = new Array(10);
+    let a;
+    for (let i=0;i<intArray.length;i++) {
+        do {
+            a = prompt("nhập vào số nguyên của mảng");
+            check = (!isNaN(a) && a == parseInt(a));
+            a = parseInt(a);
+        } while (!check);
+        intArray[i] = a;
+        console.log(typeof a);
+    }
+    let v = parseInt(prompt('Nhập 1 số nguyên bất kỳ : '));
+    let indexArray =intArray.indexOf(v);
+    let vtv=[];
+    if ( indexArray === -1) {
+        alert('V is not in the array');
+    }else {
+        vtv=intArray.splice(indexArray,1);
+     intArray.push(0);
+    }
+    console.log(intArray);
+    console.log(vtv)
+</script>
+</body>
+</html>

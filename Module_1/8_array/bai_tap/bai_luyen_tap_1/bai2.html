@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let b = parseInt(prompt('Số phần tử trong mảng'));
+    let intArray = new Array(b);
+    let max = 0;
+    let vt = 0;
+    let a;
+    for (let i = 0; i < intArray.length; i++) {
+        do {
+            a = parseFloat(prompt("nhập số : "));
+            if (intArray.indexOf(a) === -1) { //indexof để so sánh vs các phần tử trong mảng
+                intArray[i] = a;                // nếu không có thì sẽ trả về -1
+                break;
+            }
+        } while (true) //lập lại liên tục
+
+        if (intArray[i] > max) {
+            max = intArray[i]
+            vt = i
+        }
+    }
+    alert("số lớn nhất là : " + max + 'vị trí là : ' + vt);
+</script>
+</body>
+</html>
