@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reverseNum() {
+        let a = parseInt(prompt('Nhâọ số lượng của mảng'));
+        arrayNum= new Array(a);
+        for (let i=0;i<arrayNum.length;i++){
+            arrayNum[i] = parseInt(prompt('Nhập số nguyên của mảng: '))
+        }
+         arrayNum.reverse();
+        return alert(arrayNum);
+    }
+    reverseNum();
+</script>
+</body>
+</html>

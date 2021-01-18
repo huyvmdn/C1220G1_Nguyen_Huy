@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2997b675-93af-44c0-98f8-01e0954aa7bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/feet_meters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_1/bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_1/bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_1/bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_1/bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_1/bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_2/bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_2/bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_2/bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_2/bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_2/bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_2/bai6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_2/bai7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_2/bai8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/luyen_tap_2/bai9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../jaw/bai_tap/prime.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2_GIT_ HTML/Bai_tap/Gitproject" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_GIT_ HTML/Bai_tap/Gitproject" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1nCTZriMklJTcqTpfTEWSAbyHKi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bai_luyen_tap_2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2997b675-93af-44c0-98f8-01e0954aa7bb" name="Default Changelist" comment="" />
+      <created>1610893131963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610893131963</updated>
+      <workItem from="1610893133324" duration="37000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="778" y="285" key="FileChooserDialogImpl" timestamp="1610893168596">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="778" y="285" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610893168596" />
+  </component>
+</project>

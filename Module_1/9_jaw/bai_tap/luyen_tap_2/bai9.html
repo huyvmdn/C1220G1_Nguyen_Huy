@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findText() {
+        let num =0;
+        let text = prompt("nhập mảng ký tự:");
+        let a = prompt("nhập ký tự muốn kiểm tra:");
+        let texta = text.split('');
+        for (i=0; i<texta.length;i++) {
+            if (texta[i] == a) {
+                num++;
+            }
+        }
+        if (num==0) {
+            return alert('Không có ý tự nào giống ' +a+ ' trong mảng');
+        } else {
+            return alert('Số ký tự '+a+ ' có trong mảng là: '+num);
+        }
+    }
+    findText();
+</script>
+</body>
+</html>

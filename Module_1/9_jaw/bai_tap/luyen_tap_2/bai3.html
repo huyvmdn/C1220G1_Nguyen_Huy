@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt(" nhập số muốn tính giai thừa : "));
+    factorial(num);
+    function factorial(num) {
+        let a=1;
+        if (a>=1) {
+            for (let i = 1; i <= num; i++) {
+                a = a * i;
+            }
+            return alert(" Kết quả là : " + a);
+        }else {
+          return   alert("Bạn nhập không phải là số nguyên dương lớn hơn 0");
+        }
+    }
+
+</script>
+</body>
+</html>

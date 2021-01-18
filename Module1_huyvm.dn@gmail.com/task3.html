@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name;
+    let cmnd;
+    let birthday;
+    let email;
+    let address;
+    let typeService;
+    let typeRoom;
+    let typeCustomer;
+    let discount;
+    let quantityIncluded;
+    let rentDays;
+    let totalPay;
+    let check= false;
+    name= prompt("Input name: ");
+    do {
+        cmnd= prompt("Input cmnd 8 số: ");
+        if (!isNaN(cmnd) && cmnd == parseInt(cmnd) &&cmnd>0 && cmnd>9999999 && cmnd <100000000){
+            check = true;
+        }else {
+            alert('Bạn phải nhập 8 số và nguyên dương: ');
+        }
+    } while (!check);
+    check = false;
+    do {
+        birthday= prompt("Input birthday: ");
+        if (birthday.charAt(2) === '/' && birthday.charAt(5) === '/'  ){
+            let day = birthday.substring(0,2);
+            let month = birthday.substring(3,5);
+            let year = birthday.substring(6,10);
+            if (!isNaN(day) && !isNaN(month) && !isNaN(year) && day>0 && day<32
+            && month>0 && month<13 && year>1900 && year<2022 && day == parseInt(day)
+                && month == parseInt(month ) &&year ==parseInt(year) )
+            {
+                check =true;
+            }else {alert('nhập sai dữ liệu ngày sinh')}
+        }else {alert('nhập sai dữ liệu ngày sinh')}
+    } while (!check);
+
+    check=false;
+    do {
+        email= prompt("Input email: ");
+        let count = 0;
+        let doc=0;
+        for (let i=0;i<email.length;i++){
+            if (email.charAt(i) === '@') {
+                count++;
+                for (let j=i+1;j<email.length;j++){
+                if (email.charAt(j) === '.') {
+                    doc++;
+                }
+                }
+            }
+        }
+        if (count !==1 || doc<1 ) {
+            alert('Nhập sai email')
+        }else {
+            check=true;
+        }
+    } while (!check);
+
+    address= prompt("Input address: ");
+    typeService= prompt("Input type Service(villa,house,room): ");
+    typeRoom= prompt("Input type Room(vip,business,normal): ");
+    typeCustomer= prompt("Input type Customer(member,silver,gold,platinum,diamond): ");
+    discount= prompt("Input discount (%) : ");
+    check=false;
+    do {
+        quantityIncluded= prompt("Input quantity Included: ");
+        if (!isNaN(quantityIncluded) && parseInt(quantityIncluded) == quantityIncluded && quantityIncluded>0){
+            check = true;
+        }else { alert('Bạn phải nhập vào 1 số nguyên dương');
+        }
+    }while (!check);
+
+    check=false;
+    do {
+        rentDays= prompt("Input rend Days: ");
+        if (!isNaN(rentDays) && parseInt(rentDays) == rentDays && rentDays>0){
+           check = true;
+        }else { alert('Bạn phải nhập vào 1 số nguyên dương');
+        }
+    } while (!check);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a =  parseInt(prompt(" nhập số muốn kiểm tra là số nguyên tố"));
+    if(ktSNT(a)){
+        alert(a+ 'Là số nguyên tố')
+    }else {alert(a+ 'Không Là số nguyên tố')}
+   let result;
+  for (let i=0; i<10000;i++){
+      if (ktSNT(i)){
+          result+=i+"<br>";
+      }
+  }
+  document.write(result);
+
+  function ktSNT(num) {
+      if (num<2){
+          return ;
+      }
+      let check= true;
+      for (let j=2; j<=Math.sqrt(num);j++){
+          if (num%j==0){
+              check=false;
+              break;
+          }
+      }
+      if (check){
+          return true;
+      }else {
+          return false;
+      }
+  }
+</script>
+
+
+</body>
+</html>
