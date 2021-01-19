@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(pin,soanThao,hopThuDen,hopThuDi,trangThai) {
+            this.pin = pin;
+            this.soanThao= soanThao;
+            this.hopThuDen= hopThuDen;
+            this.hopThuDi= hopThuDi;
+            this.trangThai= trangThai;
+        }
+        TrangThai() {
+            return this.trangThai;
+        }
+        onOff() {
+            return !this.trangThai;
+        }
+        sacpin() {
+            while (this.pin <=100) {
+                this.pin+=0.01;
+            }
+        }
+        guiTinNhan() {
+            if(this.trangThai) {
+                if (confirm("nhập tin nhắn mới?")) {
+                    let message = prompt("nhập: ");
+                    this.hopThuDi.push(message);
+                    return message;
+                } else {
+                    let temp = "";
+                    for (let i = 0; i < this.soanThao.length; i++) {
+                        temp += i + ". " + this.soanThao[i] + "\n";
+                    }
+                    let index = prompt(temp);
+                    this.hopThuDi.push(this.soanThao[index]);
+                    return this.soanThao[index];
+                }
+                this.pin--;
+            }
+        }
+        nhanTinNhan(mobile) {
+            let message = mobile.guiTinNhan();
+            this.hopThuDen.push(message);
+        }
+        xemThuDen() {
+            let temp = "";
+            for (let i = 0; i < this.hopThuDen.length; i++) {
+                temp += i + ". " + this.hopThuDen[i] + "\n";
+            }
+            let index = prompt(temp);
+            alert(this.hopThuDen[index]);
+            this.pin--;
+        }
+    }
+    let iphone = new Mobile(80, [],[],[], true);
+    let nokia = new Mobile(90, [],[],[], true);
+    nokia.nhanTinNhan(iphone);
+    nokia.xemThuDen();
+
+</script>
+</body>
+</html>

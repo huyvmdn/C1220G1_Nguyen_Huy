@@ -5,38 +5,45 @@
     <title>Title</title>
 </head>
 <body>
- <button id="display" onclick="createRectangle()">bam vao day</button>
 <canvas id="myCanvas" width="2000px" height="1000px" style="border:1px solid #d3d3d3;"></canvas>
 <script>
 
-    function getRandomHex(){
-        return Math.floor(Math.random()*255);
-    }
-    function getRandomColor(){
-        var red = getRandomHex();
-        var green = getRandomHex();
-        var blue = getRandomHex();
-        return "rgb(" + red + "," + blue + "," + green +")";
-    }
-    function createRectangle() {
-        var ctx = document.getElementById("myCanvas").getContext("2d");
-        var color = getRandomColor();
-        var  a = Math.floor(Math.random()*200);
-        var  b = Math.floor(Math.random()*200);
-        var x = Math.random() * window.innerWidth;
-        var y = Math.random() * window.innerHeight;
-        ctx.beginPath();
-        ctx.rect(x,y,a,b);
-        ctx.fillStyle = color;
-        ctx.fill();
-    }
+     function getRandomHex(){
+         return Math.floor(Math.random()*255);
+     }
+     function getRandomColor(){
+         var red = getRandomHex();
+         var green = getRandomHex();
+         var blue = getRandomHex();
+         return "rgb(" + red + "," + blue + "," + green +")";
+     }
+    class Rectangle {
+        constructor(a,b) {
+            this.weight= a;
+            this.hight = b;
+        }
+        getPerimeter() {
+            return (this.weight+this.hight)*2;
+        }
+        getacreage() {
+            return this.weight*this.hight;
+        }
+        getPaint() {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            var color = getRandomColor();
+            var x = Math.random() * window.innerWidth;
+            var y = Math.random() * window.innerHeight;
+                ctx.beginPath();
+                ctx.rect(x,y,this.weight,this.hight);
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+        }
+    let a = new Rectangle(50,70);
+    alert(a.getPerimeter());
+    alert(a.getacreage());
+    a.getPaint();
 
-    // function createMultipleCircle(){
-    //     for(var i = 0; i < 50; i++){
-    //         createRectangle();
-    //     }
-    // }
-    createMultipleCircle();
 </script>
 </body>
 </html>

@@ -6,17 +6,26 @@
 </head>
 <body>
 <script>
-
-  function temperature(doC) {
-      if (doC< -273){
-          return  alert('Độ C phải lớn hơn -273 độ')
-      }
-      this.c = doC;
-      this.f =(this.c * 9/5) + 32;
-      this.k =  this.c + 273.15;
-      return alert('Độ C: '+doC+' Độ F: '+this.f+' Độ k: ' + this.k);
-  }
-let a= temperature(25);
+    class  Temperature{
+        constructor(doC) {
+            this.doC= doC;
+            this.doF= (doC* 9/5) + 32;
+            this.doK= doC+273.15;
+        }
+        getdoC() {
+            return this.doC;
+        }
+        getdoF() {
+            return this.doF;
+        }
+        getdoK() {
+            return this.doK;
+        }
+    }
+    let a= new Temperature(25);
+    alert("Độ C:" +a.getdoC());
+    alert('Độ F: ' +a.getdoF());
+    alert('Độ K: ' +a.getdoK());
 </script>
 </body>
 </html>
