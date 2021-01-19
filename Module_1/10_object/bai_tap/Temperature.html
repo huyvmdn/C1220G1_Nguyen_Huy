@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  function temperature(doC) {
+      if (doC< -273){
+          return  alert('Độ C phải lớn hơn -273 độ')
+      }
+      this.c = doC;
+      this.f =(this.c * 9/5) + 32;
+      this.k =  this.c + 273.15;
+      return alert('Độ C: '+doC+' Độ F: '+this.f+' Độ k: ' + this.k);
+  }
+let a= temperature(25);
+</script>
+</body>
+</html>

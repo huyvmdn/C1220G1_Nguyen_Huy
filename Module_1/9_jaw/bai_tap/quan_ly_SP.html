@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap"  placeholder="Nhập dữ liệu ">
+<button onclick="chen()" >Nhập mới</button>
+<p id="display"></p>
+
+
+
+<script>
+    let namePhone = ['Iphone','Samsung','Nokia' ];
+    display();
+    function display() {
+        let table = '<table border="1">\n' +
+            '    <tr style="background-color: forestgreen">\n' +
+            '        <th >Tên sản phẩm</th>\n' +
+            '        <th width="100px">Chỉnh sửa</th>\n' +
+            '        <th width="100px">Xóa</th>\n' +
+            '    </tr>';
+        for (i=0;i<namePhone.length;i++){
+            table+=' <tr>\n' +
+                '        <td width="100px">'+namePhone[i]+'</td>\n' +
+                '        <td width="100px"><button onclick="suaSP(' + i + ')">Chỉnh sửa</button></td>\n' +
+                '        <td width="100px"><button onclick="xoaSP(' + i + ')">Xóa</button></td>\n' +
+                '    </tr>';
+        }
+        table+='</table>';
+        document.getElementById("display").innerHTML = table;
+    }
+
+    function chen() {
+        let a = document.getElementById("nhap").value;
+        if (a !== '') {
+            namePhone.push(a);
+        }else {
+            alert('Chưa nhập dữ liệu')
+        }
+        document.getElementById("nhap").value= "";
+        display();
+    }
+    function xoaSP(id) {
+        let xacNhanXoa = confirm("Bạn có muốn xóa " + namePhone[id]);
+        if (xacNhanXoa) {
+            namePhone.splice(id, 1);
+        }
+        display();
+    }
+    function suaSP(id) {
+        let tenSPMoi = prompt("Bạn nhập tên sp mới");
+        if (tenSPMoi) {
+            namePhone[id] = tenSPMoi;
+        }
+        display();
+    }
+</script>
+</body>
+</html>
