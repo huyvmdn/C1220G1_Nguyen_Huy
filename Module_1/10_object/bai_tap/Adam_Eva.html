@@ -38,8 +38,8 @@
                 return false;
             }
         }
-        setGender() {
-            return this.gender;
+        setGender(gender) {
+             this.gender = gender;
         }
         checkApple() {
             if (this.apple) {
@@ -50,7 +50,7 @@
         }
         eatApple() {
             if (this.apple.getWeight()<1){
-                return     alert('hết táo rồi bạn ơi!!!')
+                 alert('hết táo rồi bạn ơi!!!')
             }else {
                this.weight++;
                this.apple.decrease();}
@@ -82,6 +82,7 @@
 
     console.log(eva.weight);
     eva.say();
+    eva.eatApple();
     eva.eatApple();
     eva.eatApple();
     eva.eatApple();

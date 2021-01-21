@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Caro</h3>
+<p id="result"></p>
+
+<script>
+    let board = document.getElementById("result");
+    let arr = [];
+    let data = "";
+    let isPlayer = true;
+
+    function setData() {
+        for (let i = 0; i < 20; i++) {
+            arr[i] = new Array("", "", "", "", "", "",'','','','','',"", "", "", "", "", "",'','','');
+        }
+    }
+    setData();
+
+    function drawBoard() {
+        data = "<table border=1>"
+        for (let i = 0; i < 20; i++) {
+            data += "<tr>";
+            for (let j = 0; j < 20; j++) {
+                data += "<td align='center' style='width:30px;height:30px ' onclick='changeValue(" + i + "," + j + ");'>" + arr[i][j] + "</td>"
+            }
+            data += "</tr>";
+        }
+        data += "</table>";
+        board.innerHTML = data;
+    }
+
+    function changeValue(x, y) {
+        if (checkExist(x, y)) {
+            if (isPlayer) {
+                arr[x][y] = "X";
+                isPlayer = false;
+            } else {
+                arr[x][y] = "O";
+                isPlayer = true;
+            }
+        }
+        drawBoard();
+        let value = isPlayer ? "O" : "X";
+        console.log(value);
+        console.log(isWin(value));
+        if (isWin(value)) {
+            alert(value + " win");
+            setData();
+            drawBoard();
+        }
+    }
+
+    function checkExist(x, y) {
+        if (arr[x][y] === "O" || arr[x][y] === "X") {
+            alert("Ô bạn chọn đã được chọn trước. Vui lòng chọn ô khác.");
+            return false;
+        }
+        return true;
+    }
+
+    function isWin(value) {
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] === value) {
+                    if (arr[i][j + 1] === value && arr[i][j + 2] === value && arr[i][j + 3] === value
+                    && arr[i][j + 4] === value ) {
+                        return true;
+                    }
+                    if (arr[i + 1][j] === value && arr[i + 2][j] === value && arr[i + 3][j] === value
+                        && arr[i + 4][j] === value) {
+                        return true;
+                    }
+                    if (arr[i + 1][j + 1] === value && arr[i + 2][j + 2] === value
+                        && arr[i + 3][j + 3] === value && arr[i + 4][j + 4] === value) {
+                        return true;
+                    }
+                    if (arr[i + 1][j - 1] === value && arr[i + 2][j - 2] === value
+                        && arr[i + 3][j - 3] === value && arr[i + 4][j - 4] === value) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    drawBoard();
+</script>
+</body>
+</html>
