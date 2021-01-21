@@ -25,11 +25,10 @@
         }
     }
     class Human {
-        constructor(name,gender,weight,apple) {
+        constructor(name,gender,weight,) {
             this.name = name;
             this.gender = gender;
             this.weight = weight;
-            this.apple = apple;
         }
         isMale () {
             if (this.gender == 'male') {
@@ -48,12 +47,12 @@
                 return true;
             }
         }
-        eatApple() {
-            if (this.apple.getWeight()<1){
+        eatApple(apple) {
+            if (apple.getWeight()<1){
                  alert('hết táo rồi bạn ơi!!!')
             }else {
                this.weight++;
-               this.apple.decrease();}
+               apple.decrease();}
         }
         say() {
             if (this.isMale()){
@@ -77,28 +76,28 @@
     }
     let a1 = new Apple();
     let a2 = new Apple();
-    let adam = new Human('Adame','male',90,a1);
-    let eva = new Human('Eva','famale',45,a2);
+    let adam = new Human('Adame','male',90);
+    let eva = new Human('Eva','famale',45);
 
     console.log(eva.weight);
     eva.say();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
-    eva.eatApple();
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
+    eva.eatApple(a1);
     console.log(eva.weight);
     console.log (eva.isMale());
     adam.say();
     console.log(adam);
-    adam.eatApple();
+    adam.eatApple(a2);
     console.log(adam.weight);
     console.log(eva);
     console.log(a1);
