@@ -20,6 +20,19 @@
     let totalPay;
     let check= false;
     name= prompt("Input name: ");
+    name=name.trim().toLowerCase();
+    let tempname ='';
+    for(let i=0;i<name.length;i++) {
+        if ( name.charAt(i) === " " && name.charAt(i+1)===" ") {
+            continue;
+        }
+        if (i === 0 || name.charAt(i-1) === ' ') {
+            tempname+=name.charAt(i).toUpperCase();
+            continue;
+        }
+        tempname+= name.charAt(i);
+    }
+    alert(tempname);
     do {
         cmnd= prompt("Input cmnd 8 số: ");
         if (!isNaN(cmnd) && cmnd == parseInt(cmnd) &&cmnd>0 && cmnd>9999999 && cmnd <100000000){

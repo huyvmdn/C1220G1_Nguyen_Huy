@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<input type="text" id="nhap" placeholder="Tên Khách Hàng"> -->
+<input type="button" value="Thêm mới " onclick="themMoi()">
+<p id="hienThi"></p>
+<script>
+    let arrNameCustomers = ['KH1','KH2'];
+    arrNameCustomers.sort();
+    hienThi();
+    // hàm hiện thị
+    function hienThi() {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>TênKH</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < arrNameCustomers.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + arrNameCustomers[i] + '</td>\n' +
+                '        <td> <button onclick="suaKH(' + i + ')">Edit</button></td>\n' +
+                '        <td><button onclick="xoaKH(' + i + ')">Delete</button></td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("hienThi").innerHTML = tableString;
+    }
+    function xoaKH(id) {
+        let xacNhanXoa = confirm("Bạn có muốn xóa " + arrNameCustomers[id]);
+        if (xacNhanXoa) {
+            arrNameCustomers.splice(id, 1);
+        }
+        arrNameCustomers.sort();
+        hienThi();
+    }
+    function suaKH(id) {
+        let tenKHMoi = prompt("Bạn nhập tên khách hàng mới");
+        if (tenKHMoi) {
+            arrNameCustomers[id] = tenKHMoi;
+        }
+        arrNameCustomers.sort();
+        hienThi();
+    }
+    function themMoi() {
+          let  soKH= prompt("Số lượng khách hàng thêm vào: ");
+        for (let i=0;i<soKH;i++){
+          let khachHangMoi = prompt('Nhập tên');
+          arrNameCustomers.push(khachHangMoi);
+        }
+        arrNameCustomers.sort();
+        hienThi();
+    }
+    </script>
+</body>
+</html>
