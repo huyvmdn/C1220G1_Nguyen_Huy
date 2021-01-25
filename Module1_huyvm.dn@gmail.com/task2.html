@@ -17,6 +17,7 @@
     let discount=10;
     let quantityIncluded=5;
     let rentDays=7;
+    let inputCityValue= 'hue';
     let totalPay;
 
     let choose = prompt("1. Hiển thị thông tin khách hàng.\n" +
@@ -34,8 +35,9 @@
                 "typeCustomer : "+typeCustomer +"\n"+
                 "discount : "+discount +"\n"+
                 "quantityIncluded : "+quantityIncluded +"\n"+
-                "rendDays : "+ rentDays +"\n"
-            )
+                "rendDays : "+ rentDays +"\n"+
+                "inputCityValue : "+ inputCityValue +"\n"
+            );
             break;
         case "2":
             chooseedit= parseInt(prompt("1. name : "+name + "\n"+
@@ -48,8 +50,9 @@
                 "8. typeCustomer : "+typeCustomer +"\n"+
                 "9. discount : "+discount +"\n"+
                 "10. quantityIncluded : "+quantityIncluded +"\n"+
-                "11. rendDays : "+ rentDays
-            ))
+                "11. rendDays : "+ rentDays+"\n"+
+                "12. inputCityValue : "+ inputCityValue+"\n"
+            ));
             switch (chooseedit) {
                 case 1:
                     name= prompt("Input name: ");
@@ -63,8 +66,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 2:
                     cmnd= prompt("Input cmnd: ");
@@ -78,8 +82,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 3:
                     birthday= prompt("Input birthday: ");
@@ -93,8 +98,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 4:
                     email= prompt("Input email: ");
@@ -108,8 +114,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 5:
                     address= prompt("Input address: ");
@@ -123,8 +130,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 6:
                     typeService= prompt("Input type Service(villa,house,room): ");
@@ -138,8 +146,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 7:
                     typeRoom= prompt("Input type Room(vip,business,normal): ");
@@ -153,8 +162,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 8:
                     typeCustomer= prompt("Input type Customer(member,silver,gold,platinum,diamond): ");
@@ -168,8 +178,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 9:
                     discount= prompt("Input discount (%) : ");
@@ -183,8 +194,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 10:
                     quantityIncluded= prompt("Input quantity Included: ");
@@ -198,8 +210,9 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
                     break;
                 case 11:
                     rentDays= prompt("Input rend Days: ");
@@ -213,18 +226,69 @@
                         "8.typeCustomer : "+typeCustomer +"\n"+
                         "9.discount : "+discount +"\n"+
                         "10.quantityIncluded : "+quantityIncluded +"\n"+
-                        "11.rendDays : "+ rentDays +"\n"
-                    )
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n"
+                    );
+                    break;
+                case 12:
+                    inputCityValue= prompt('input CityValue : ');
+                    alert("1.name : "+name + "\n"+
+                        "2.cmnd : "+cmnd +"\n"+
+                        "3.birthday : " + birthday +"\n"+
+                        "4.email : "+email +"\n"+
+                        "5.address : "+address +"\n"+
+                        "6.typeService : "+typeService +"\n"+
+                        "7.typeRoom : "+typeRoom +"\n"+
+                        "8.typeCustomer : "+typeCustomer +"\n"+
+                        "9.discount : "+discount +"\n"+
+                        "10.quantityIncluded : "+quantityIncluded +"\n"+
+                        "11. rendDays : "+ rentDays+"\n"+
+                        "12. inputCityValue : "+ inputCityValue+"\n");
                     break;
                     default:
                         alert('failed');
             }
             break;
-            default:
-                alert('Bạn hãy chọn các chức năng có trong trình đơn');
+        case '3':
+            switch
+                (inputCityValue) {
+                case 'hue':
+                    discount += 10;
+                    break;
+                case 'danang':
+                    discount +=20;
+                    break;
+                case 'quangnam':
+                    discount +=5;
+                    break;
+            }
+            switch (true) {
+                case (rentDays === 1):
+                    discount += 0;
+                    break;
+                case (rentDays >=2 && rentDays <=4):
+                    discount += 10;
+                    break;
+                case (rentDays >=5 && rentDays<=7):
+                    discount += 20;
+                    break;
+                default :
+                    discount += 30
+            }
+            switch (typeService) {
+                case 'villa':
+                    alert(500 * rentDays - discount + "$");
+                    break;
+                case 'house':
+                    alert(300 * rentD - discount + "$");
+                    break;
+                case 'room':
+                    alert(100 * rentD - discount + "$");
+                    break;
+                default:
+                    alert("Vui lòng chọn 1 trong 3 loại phòng");
+            }
     }
-
-
 
 
 

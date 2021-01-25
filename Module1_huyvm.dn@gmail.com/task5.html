@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrListCustomers=[];
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Add New Customer.\n" +
+            "2. Display Information Customer.\n" +
+            "3. Edit Information Customer.\n" +
+            "4. Delete Customer.\n" +
+            "5. Exit\n"));
+        switch (choose) {
+            case 1:
+                addNewCustomer();
+                break;
+            case 2:
+                displayCustomers();
+                break;
+            case 3:
+                editCustomer();
+                break;
+            case 4:
+                deleteCustomer();
+            case 5:
+                alert('GOOD BYE!!! Mệt mỏi ^_^');
+    }
+
+    function addNewCustomer() {
+        let name;
+        let cmnd;
+        let birthday;
+        let email;
+        let address;
+        let typeService;
+        let typeRoom;
+        let typeCustomer;
+        let discount;
+        let quantityIncluded;
+        let rentDays;
+        let totalPay;
+        let check= false;
+        name= prompt("Input name: ");
+        name=name.trim().toLowerCase();
+        let tempname ='';
+        for(let i=0;i<name.length;i++) {
+            if ( name.charAt(i) === " " && name.charAt(i+1)===" ") {
+                continue;
+            }
+            if (i === 0 || name.charAt(i-1) === ' ') {
+                tempname+=name.charAt(i).toUpperCase();
+                continue;
+            }
+            tempname+= name.charAt(i);
+        }
+        name=tempname;
+        alert(name);
+
+        do {
+            cmnd= prompt("Input cmnd 8 số: ");
+            if (!isNaN(cmnd) && cmnd == parseInt(cmnd) &&cmnd>0 && cmnd>9999999 && cmnd <100000000){
+                check = true;
+            }else {
+                alert('Bạn phải nhập 8 số và nguyên dương: ');
+            }
+        } while (!check);
+        check = false;
+        do {
+            birthday= prompt("Input birthday: ");
+            if (birthday.charAt(2) === '/' && birthday.charAt(5) === '/'  ){
+                let day = birthday.substring(0,2);
+                let month = birthday.substring(3,5);
+                let year = birthday.substring(6,10);
+                if (!isNaN(day) && !isNaN(month) && !isNaN(year) && day>0 && day<32
+                    && month>0 && month<13 && year>1900 && year<2022 && day == parseInt(day)
+                    && month == parseInt(month ) &&year ==parseInt(year) )
+                {
+                    check =true;
+                }else {alert('nhập sai dữ liệu ngày sinh')}
+            }else {alert('nhập sai dữ liệu ngày sinh')}
+        } while (!check);
+
+        check=false;
+        do {
+            email= prompt("Input email: ");
+            let count = 0;
+            let doc=0;
+            for (let i=0;i<email.length;i++){
+                if (email.charAt(i) === '@') {
+                    count++;
+                    for (let j=i+1;j<email.length;j++){
+                        if (email.charAt(j) === '.') {
+                            doc++;
+                        }
+                    }
+                }
+            }
+            if (count !==1 || doc<1 ) {
+                alert('Nhập sai email')
+            }else {
+                check=true;
+            }
+        } while (!check);
+
+        address= prompt("Input address: ");
+        typeService= prompt("Input type Service(villa,house,room): ");
+        typeRoom= prompt("Input type Room(vip,business,normal): ");
+        typeCustomer= prompt("Input type Customer(member,silver,gold,platinum,diamond): ");
+        discount= prompt("Input discount (%) : ");
+        check=false;
+        do {
+            quantityIncluded= prompt("Input quantity Included: ");
+            if (!isNaN(quantityIncluded) && parseInt(quantityIncluded) == quantityIncluded && quantityIncluded>0){
+                check = true;
+            }else { alert('Bạn phải nhập vào 1 số nguyên dương');
+            }
+        }while (!check);
+
+        check=false;
+        do {
+            rentDays= prompt("Input rend Days: ");
+            if (!isNaN(rentDays) && parseInt(rentDays) == rentDays && rentDays>0){
+                check = true;
+            }else { alert('Bạn phải nhập vào 1 số nguyên dương');
+            }
+        } while (!check);
+        let customer= [name,cmnd,birthday,email,address,typeService,typeRoom,typeCustomer,discount,quantityIncluded,rentDays];
+        arrListCustomers.push(customer);
+        console.log(customer);
+        console.log(arrListCustomers);
+        displayMainMenu();
+    }
+    function displayCustomers() {
+        let text = '';
+        for (let i = 0; i < arrListCustomers.length; i++) {
+            text += (i + 1) + '. Khách hàng :' + arrListCustomers[i][0] + '.';
+            text += ' CMND :' + arrListCustomers[i][1] + '.\n';
+        }
+        text += arrListCustomers.length + 1 + '. Back to Menu';
+        console.log(text);
+        let choose2 = parseInt(prompt(text));
+        console.log(choose2);
+        for (let i = 0; i < arrListCustomers.length; i++) {
+            if (choose2 == (i+1)) {
+                alert("name : " + arrListCustomers[i][0] + "\n" +
+                    "cmnd : " + arrListCustomers[i][1] + "\n" +
+                    "birthday : " + arrListCustomers[i][2] + "\n" +
+                    "email : " + arrListCustomers[i][3] + "\n" +
+                    "address : " + arrListCustomers[i][4] + "\n" +
+                    "typeService : " + arrListCustomers[i][5] + "\n" +
+                    "typeRoom : " + arrListCustomers[i][6] + "\n" +
+                    "typeCustomer : " + arrListCustomers[i][7] + "\n" +
+                    "discount : " + arrListCustomers[i][8] + "\n" +
+                    "quantityIncluded : " + arrListCustomers[i][9] + "\n" +
+                    "rendDays : " + arrListCustomers[i][10] + "\n"
+                );
+                displayMainMenu();
+            }
+        }
+        if (choose2 == arrListCustomers.length+1) {
+            displayMainMenu();
+        }
+    }
+      function editCustomer() {
+          let text = '';
+          for (let i = 0; i < arrListCustomers.length; i++) {
+              text += (i + 1) + '. Khách hàng :' + arrListCustomers[i][0] + '.';
+              text += ' CMND :' + arrListCustomers[i][1] + '.\n';
+          }
+          text += arrListCustomers.length + 1 + '. Back to Menu';
+          console.log(text);
+          let choose3 = parseInt(prompt(text));
+          for (let i = 0; i < arrListCustomers.length; i++) {
+              if (choose3 == (i + 1)) {
+                 let choose4= prompt("1. name : " + arrListCustomers[i][0] + "\n" +
+                                "2. cmnd : " + arrListCustomers[i][1] + "\n" +
+                                "3. birthday : " + arrListCustomers[i][2] + "\n" +
+                                "4. email : " + arrListCustomers[i][3] + "\n" +
+                                "5. address : " + arrListCustomers[i][4] + "\n" +
+                                "6. typeService : " + arrListCustomers[i][5] + "\n" +
+                                "7. typeRoom : " + arrListCustomers[i][6] + "\n" +
+                               "8. typeCustomer : " + arrListCustomers[i][7] + "\n" +
+                               "9. discount : " + arrListCustomers[i][8] + "\n" +
+                              "10. quantityIncluded : " + arrListCustomers[i][9] + "\n" +
+                              "11. rendDays : " + arrListCustomers[i][10] + "\n"+
+                              "12. Back \n");
+                     console.log(choose4);
+                     choose4= parseInt(choose4);
+                 switch (choose4) {
+                     case 1:
+                         arrListCustomers[i][0] = prompt("Input name: ");
+                         alert(arrListCustomers[i]);
+                         displayMainMenu();
+                         break;
+                     case 2:
+                         check = false;
+                         do {
+                             arrListCustomers[i][1]= prompt("Input cmnd 8 số: ");
+                             if (!isNaN(arrListCustomers[i][1]) && arrListCustomers[i][1] == parseInt(arrListCustomers[i][1])
+                                 &&arrListCustomers[i][1]>0 && arrListCustomers[i][1]>9999999
+                                 && arrListCustomers[i][1] <100000000){
+                                 check = true;
+                             }else {
+                                 alert('Bạn phải nhập 8 số và nguyên dương: ');
+                             }
+                         } while (!check);
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 3:
+                         check = false;
+                         do {
+                             arrListCustomers[i][2]= prompt("Input birthday: ");
+                             if (arrListCustomers[i][2].charAt(2) === '/' && arrListCustomers[i][2].charAt(5) === '/'  ){
+                                 let day = arrListCustomers[i][2].substring(0,2);
+                                 let month = arrListCustomers[i][2].substring(3,5);
+                                 let year = arrListCustomers[i][2].substring(6,10);
+                                 if (!isNaN(day) && !isNaN(month) && !isNaN(year) && day>0 && day<32
+                                     && month>0 && month<13 && year>1900 && year<2022 && day == parseInt(day)
+                                     && month == parseInt(month ) &&year ==parseInt(year) )
+                                 {
+                                     check =true;
+                                 }else {alert('nhập sai dữ liệu ngày sinh')}
+                             }else {alert('nhập sai dữ liệu ngày sinh')}
+                         } while (!check);
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 4:
+                             arrListCustomers[i][3]= prompt("Input email: ");
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 5:
+                         arrListCustomers[i][4]= prompt("Input address: ");
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 6:
+                         arrListCustomers[i][5]= prompt("Input type Service(villa,house,room): ");
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 7:
+                         arrListCustomers[i][6]= prompt("Input type Room(vip,business,normal): ");
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 8:
+                         arrListCustomers[i][7]= prompt("Input type Customer(member,silver,gold,platinum,diamond): ");
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 9:
+                         arrListCustomers[i][8]= prompt("Input discount (%) : ");
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 10:
+                         check=false;
+                         do {
+                             arrListCustomers[i][9]= prompt("Input quantity Included: ");
+                             if (!isNaN( arrListCustomers[i][9]) && parseInt( arrListCustomers[i][9]) ==  arrListCustomers[i][9] &&  arrListCustomers[i][9]>0){
+                                 check = true;
+                             }else { alert('Bạn phải nhập vào 1 số nguyên dương');
+                             }
+                         }while (!check);
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 11:
+                         check=false;
+                         do {
+                             arrListCustomers[i][10]= prompt("Input rend Days: ");
+                             if (!isNaN(arrListCustomers[i][10]) && parseInt(arrListCustomers[i][10]) == arrListCustomers[i][10] && arrListCustomers[i][10]>0){
+                                 check = true;
+                             }else { alert('Bạn phải nhập vào 1 số nguyên dương');
+                             }
+                         } while (!check);
+                         alert(arrListCustomers[i]);
+                         displayMainMenu()
+                         break;
+                     case 12:
+                         editCustomer()
+                         break;
+                 }
+
+              }
+          }
+          if (choose3 == arrListCustomers.length + 1) {
+              displayMainMenu();
+          }
+      }
+       function  deleteCustomer() {
+           let text = '';
+           for (let i = 0; i < arrListCustomers.length; i++) {
+               text += (i + 1) + '. Khách hàng :' + arrListCustomers[i][0] + '.';
+               text += ' CMND :' + arrListCustomers[i][1] + '.\n';
+           }
+           text += arrListCustomers.length + 1 + '. Back to Menu';
+           console.log(text);
+           let choose = parseInt(prompt(text));
+            arrListCustomers.splice((choose-1),1);
+            alert(arrListCustomers);
+       }
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>

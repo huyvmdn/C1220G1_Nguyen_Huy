@@ -80,10 +80,38 @@
     } while (!check);
 
     address= prompt("Input address: ");
-    typeService= prompt("Input type Service(villa,house,room): ");
-    typeRoom= prompt("Input type Room(vip,business,normal): ");
-    typeCustomer= prompt("Input type Customer(member,silver,gold,platinum,diamond): ");
-    discount= prompt("Input discount (%) : ");
+    check=false;
+    do {
+        typeService= prompt("Input type Service(villa,house,room): ");
+        if (typeService == 'villa' || typeService == 'house' ||typeService == 'room' ){
+            check = true;
+        }else { alert('Bạn phải nhập đúng loại phòng muốn thuê');
+        }
+    }while (!check);
+    check=false;
+    do {
+        typeRoom= prompt("Input type Room(vip,business,normal): ");
+        if (typeRoom == 'vip' || typeRoom == 'business' ||typeRoom == 'normal' ){
+            check = true;
+        }else { alert('Bạn phải nhập đúng loại phòng muốn thuê');
+        }
+    }while (!check);
+    check=false;
+    do {
+        typeCustomer= prompt("Input type Customer(member,silver,gold,platinum,diamond): ");
+        if (typeCustomer == 'member' || typeCustomer == 'silver' ||typeCustomer == 'gold'||typeCustomer == 'platinum'||typeCustomer == 'diamond' ){
+            check = true;
+        }else { alert('Bạn phải nhập đúng loại phòng muốn thuê');
+        }
+    }while (!check);
+    check=false;
+    do {
+        discount= prompt("Input discount (%) : ");
+        if (!isNaN(discount) && parseInt(discount) == discount && discount>0){
+            check = true;
+        }else { alert('Bạn phải nhập vào 1 số nguyên dương');
+        }
+    }while (!check);
     check=false;
     do {
         quantityIncluded= prompt("Input quantity Included: ");
