@@ -241,7 +241,7 @@
             "3. Display Total Pay of Customer.\n" +
             "4. Edit Information Customer.\n" +
             "5. Delete Customer.\n" +
-            "6. Exit\n"));
+            "6. Back\n"));
         switch (choose) {
             case 1:
                 addNewCustomer();
@@ -258,7 +258,10 @@
             case 5:
                 deleteCustomer();
             case 6:
-                alert('GOOD BYE!!! Mệt mỏi ^_^');
+                displayEmployeeCustomer()
+                break;
+            default:
+                displayMainMenu();
         }
         function displayCustomers() {
             let text = '';
@@ -289,6 +292,8 @@
             }
             if (choose2 == arrListCustomers.length+1) {
                 displayMainMenu();
+            } else {
+                displayMainMenu();
             }
         }
         function displayTotalPay() {
@@ -307,6 +312,8 @@
                 }
             }
             if (choosep == arrListCustomers.length+1) {
+                displayMainMenu();
+            }else {
                 displayMainMenu();
             }
         }
@@ -376,20 +383,20 @@
                             arrListCustomers[i].setEmail(prompt("Input email: "));
                             editCustomer();
                         case 5:
-                            arrListCustomers[i][4]= prompt("Input address: ");
+                            arrListCustomers[i].setAddress( prompt("Input address: "));
                             editCustomer();
                         case 6:
                             arrListCustomers[i].setTypeService(prompt("Input type Service(villa,house,room): "))
                             editCustomer();
                         case 7:
-                            arrListCustomers[i][6]= prompt("Input type Room(vip,business,normal): ");
+                            arrListCustomers[i].setTypeRoom( prompt("Input type Room(vip,business,normal): "));
                             alert(arrListCustomers[i]);
-                            displayMainMenu()
+                            displayMainMenu();
                             break;
                         case 8:
-                            arrListCustomers[i][7]= prompt("Input type Customer(member,silver,gold,platinum,diamond): ");
+                            arrListCustomers[i].setTypeCustomer( prompt("Input type Customer(member,silver,gold,platinum,diamond): "));
                             alert(arrListCustomers[i]);
-                            displayMainMenu()
+                            displayMainMenu();
                             break;
                         case 9:
                             arrListCustomers[i].setdiscount(prompt("Input discount (%) : "));
@@ -417,10 +424,14 @@
                         case 12:
                             editCustomer()
                             break;
+                        default:
+                            displayMainMenu();
                     }
                 }
             }
             if (choose3 == arrListCustomers.length + 1) {
+                displayMainMenu();
+            }else {
                 displayMainMenu();
             }
         }
@@ -432,12 +443,282 @@
             }
             text += arrListCustomers.length + 1 + '. Back to Menu';
             console.log(text);
-            let choose = parseInt(prompt(text));
-            arrListCustomers.splice((choose-1),1);
-            alert(arrListCustomers);
+            let choose4 = parseInt(prompt(text));
+            console.log(text);
+            if (arrListCustomers.length==0) {
+            alert('Danh sách rỗng');
+                displayMainMenu();
+            }
+            for (let i = 0; i < arrListCustomers.length; i++) {
+               switch (choose4) {
+                case i+1:
+                    arrListCustomers.splice((choose4-1),1);
+                    deleteCustomer();
+                    break;
+                    case (arrListCustomers.length + 1):
+                       displayMainMenu();
+                       break;
+                   default:
+                       deleteCustomer();
+               }
+                }
+            }
+
+    }
+    let listEmployees= [];
+    class Employee {
+        constructor(name,cmnd,birthday,email,address,salary,job) {
+            this.name=name;
+            this.cmnd=cmnd;
+            this.birthday=birthday;
+            this.email=email;
+            this.address=address;
+            this.salary= salary;
+            this.job=job;
+
+        }
+        getName () {
+            return  this.name;
+        }
+        setName(name) {
+            this.name = name;
+        }
+        getCMND() {
+            return this.cmnd
+        }
+        setCMND(CMND) {
+            this.cmnd=CMND;
+        }
+        getBirthday () {
+            return this.birthday;
+        }
+        setBirthday (birthday) {
+            this.birthday = birthday;
+        }
+        getEmail () {
+            return this.email;
+        }
+        setEmail (email) {
+            this.email = email;
+        }
+        getAddress () {
+            return this.address;
+        }
+        setAddress (address) {
+            this.address = address;
+        }
+        getJob () {
+            return this.job;
+        }
+        setJob (job) {
+            this.job = job;
+        }
+        getSalary () {
+            return this.salary;
+        }
+        setSalary (salary) {
+            this.salary = salary;
+        }
+        resultSalary() {
+            let result=0;
+            if(this.job == 'manager' ) {
+                result = 500 + parseFloat(this.salary)
+            } else if (this.job == 'sale' ) {
+                result = 300 + parseFloat(this.salary)
+            }else if (this.job == 'marketing' ) {
+                result = 200 + parseFloat(this.salary)
+            } else {
+                result=this.salary }
+            alert('Employee: '+this.name+ 'Job : '+this.job +'\n'
+            +'Salary: '+ result);
+            SalaryEmployee();
+        }
+
+    }
+    function displayEmployee() {
+        let choose = parseInt(prompt("1. Add new Employees.\n" +
+            "2. Display information Employees.\n" +
+            "3. Salary of Employees.\n" +
+            "4. Back\n"));
+        switch (choose) {
+            case 1:
+                addNewEmployee();
+                break;
+            case 2:
+                displayInfoEmployee();
+                break;
+            case 3:
+                SalaryEmployee();
+                break;
+            case 4:
+                displayEmployeeCustomer()
+                break;
+            default:
+                displayEmployeeCustomer();
         }
     }
-    displayMainMenu();
+
+
+    function displayEmployeeCustomer() {
+        let choose = parseInt(prompt("1. Customer.\n" +
+            "2. Employee.\n" +
+            "3. Exit\n"));
+        switch (choose) {
+            case 1:
+                displayMainMenu();
+                break;
+            case 2:
+                displayEmployee();
+                break;
+            case 3:
+                alert('GOOD BYE!!! Mệt mỏi ^_^');
+                break;
+            default:
+                displayEmployeeCustomer();
+        }
+    }
+    function addNewEmployee() {
+        let name;
+        let cmnd;
+        let birthday;
+        let email;
+        let address;
+        let job;
+        let salary;
+        let check= false;
+        name= prompt("Input name: ");
+        name=name.trim().toLowerCase();
+        let tempname ='';
+        for(let i=0;i<name.length;i++) {
+            if ( name.charAt(i) === " " && name.charAt(i+1)===" ") {
+                continue;
+            }
+            if (i === 0 || name.charAt(i-1) === ' ') {
+                tempname+=name.charAt(i).toUpperCase();
+                continue;
+            }
+            tempname+= name.charAt(i);
+        }
+        name=tempname;
+        alert(name);
+        do {
+            cmnd= prompt("Input cmnd 8 số: ");
+            if (!isNaN(cmnd) && cmnd == parseInt(cmnd) &&cmnd>0 && cmnd>9999999 && cmnd <100000000){
+                check = true;
+            }else {
+                alert('Bạn phải nhập 8 số và nguyên dương: ');
+            }
+        } while (!check);
+        check = false;
+        do {
+            birthday= prompt("Input birthday(dd/mm/yyyy): ");
+            if (birthday.charAt(2) === '/' && birthday.charAt(5) === '/'  ){
+                let day = birthday.substring(0,2);
+                let month = birthday.substring(3,5);
+                let year = birthday.substring(6,10);
+                if (!isNaN(day) && !isNaN(month) && !isNaN(year) && day>0 && day<32
+                    && month>0 && month<13 && year>1900 && year<2022 && day == parseInt(day)
+                    && month == parseInt(month ) &&year ==parseInt(year) )
+                {
+                    check =true;
+                }else {alert('nhập sai dữ liệu ngày sinh')}
+            }else {alert('nhập sai dữ liệu ngày sinh')}
+        } while (!check);
+
+        check=false;
+        do {
+            email= prompt("Input email(abc@abc.abc): ");
+            let count = 0;
+            let doc=0;
+            for (let i=0;i<email.length;i++){
+                if (email.charAt(i) === '@') {
+                    count++;
+                    for (let j=i+1;j<email.length;j++){
+                        if (email.charAt(j) === '.') {
+                            doc++;
+                        }
+                    }
+                }
+            }
+            if (count !==1 || doc<1 ) {
+                alert('Nhập sai email')
+            }else {
+                check=true;
+            }
+        } while (!check);
+
+        address= prompt("Input address: ");
+       job = prompt("Input job: ");
+        check=false;
+        do {
+            salary= prompt("Input Basic salary: ");
+            if (!isNaN(salary) && parseInt(salary) == salary && salary>0){
+                check = true;
+            }else { alert('Bạn phải nhập vào 1 số nguyên dương');
+            }
+        } while (!check);
+
+        let employee= new Employee(name,cmnd,birthday,email,address,salary,job);
+        listEmployees.push(employee);
+        console.log(employee);
+        console.log(listEmployees);
+        displayEmployee();
+    }
+    function displayInfoEmployee() {
+        let text = '';
+        for (let i = 0; i < listEmployees.length; i++) {
+            text += (i + 1) + '. Employee :' + listEmployees[i].getName() + '.';
+            text += ' Job :' + listEmployees[i].getJob() + '.\n';
+        }
+        text += listEmployees.length + 1 + '. Back to Menu';
+        console.log(text);
+        let choose2 = parseInt(prompt(text));
+        console.log(choose2);
+        for (let i = 0; i < listEmployees.length; i++) {
+            if (choose2 == (i+1)) {
+                alert("name : " + listEmployees[i].getName() + "\n" +
+                    "cmnd : " + listEmployees[i].getCMND() + "\n" +
+                    "birthday : " + listEmployees[i].getBirthday() + "\n" +
+                    "email : " + listEmployees[i].getEmail() + "\n" +
+                    "address : " + listEmployees[i].getAddress() + "\n" +
+                    "basic salary : " + listEmployees[i].getSalary() + "\n" +
+                    "job : " + listEmployees[i].getJob() + "\n"
+                );
+                displayEmployee();
+            }else {
+                displayEmployee();
+            }
+        }
+        if (choose2 == listEmployees.length+1) {
+            displayEmployee();
+        } else {
+            displayEmployee();
+        }
+    }
+    function SalaryEmployee() {
+        let text = '';
+        for (let i = 0; i < listEmployees.length; i++) {
+            text += (i + 1) + '. Employee :' + listEmployees[i].getName() + '.';
+            text += ' Job :' + listEmployees[i].getJob() + '.\n';
+        }
+        text += listEmployees.length + 1 + '. Back to Menu';
+        console.log(text);
+        let choose3 = parseInt(prompt(text));
+        for (let i=0;i<=listEmployees.length;i++) {
+            if(listEmployees.length== 0 ) {
+                displayEmployee()
+            }else {
+                if (choose3 == (i + 1)) {
+                    listEmployees[i].resultSalary();
+                } else if (choose3 == listEmployees.length + 1) {
+                    displayEmployee();
+                } else {
+                    SalaryEmployee();
+                }
+            }
+        }
+    }
+        displayEmployeeCustomer();
 </script>
 </body>
 </html>
